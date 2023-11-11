@@ -8,7 +8,7 @@
     "start": "nodemon app.js",
     "start-server": "node app.js"
   },
-  "author": "IkramBagban",
+  "author": "Ikram Bagban",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^1.18.3"
