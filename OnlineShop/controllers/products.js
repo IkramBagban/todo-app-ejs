@@ -20,7 +20,8 @@ exports.getAddProducts = (req, res, next) => {
 
 
  exports.getProducts = (req, res, next) => {
-  const products = Product.fetchAll()
+  Product.fetchAll(products =>{
+
     res.render('shop', {
       prods: products,
       pageTitle: 'Shop',
@@ -29,4 +30,5 @@ exports.getAddProducts = (req, res, next) => {
       activeShop: true,
       productCSS: true
     });
+  })
   }
