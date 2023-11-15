@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pageTitle</title>
+</head>
+<body>
+    <h1><%= pageTitle %></h1>
+    <ul>
+        <% for(let i = 0; i< todos.length; i++){ %>
+         <li> <%= todos[i].todo %> </li> 
+         <form action="">
+                
+             <button>edit</button>  
+         </form>
+        <% } %>
+    </ul>
+
+    <form action="/add-todo" method="GET">
+        <button>Add Todo</button>
+    </form>
+</body>
+</html>
