@@ -27,6 +27,6 @@ sequelize
   .then(result =>{
     console.log(result)
   })
-  .catch((e) => console.log(e));
+  .catch((e) => console.log('e=> ',e));
 
 app.listen(3000);

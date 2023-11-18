@@ -1,7 +1,7 @@
 const mysql = require('mysql2');
 const pass = require("../pass");
 
-// const password =  require('../pass.js')
+const password =  require('../pass.js')
 
 // const pool = mysql.createPool({
 //     host: 'localhost',
@@ -15,7 +15,7 @@ const pass = require("../pass");
 // sequelize
 const Sequelize = require("sequelize");
 
-const sequelize = new Sequelize("onlineshop", "root", pass, {
+const sequelize = new Sequelize("onlineshop", "root", '9kr1m@mysql', {
   dialect: "mysql",
   host: "localhost",
 });
