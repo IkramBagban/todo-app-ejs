@@ -15,18 +15,15 @@ exports.getProducts = (req, res, next) => {
 
 exports.getProduct = (req, res, next) => {
   const prodId = req.params.productId;
-  // Product.findById(prodId, (product) => {});
-
-  Product.findById(prodId)
-    .then(([product]) => {
-      console.log(product[0]);
+  Product.findByPk(prodId)
+    .then((product) => {
       res.render("shop/product-detail", {
-        product: product[0],
-        pageTitle: product[0].title,
+        product: product,
+        pageTitle: product.title,
         path: "/products",
       });
     })
-    .catch((e) => console.log(e));
+    .catch((e) => console.log("Get An Error While Fetching A Single Product", e));
 };
 
 exports.getIndex = (req, res, next) => {
