@@ -15,7 +15,7 @@ const password =  require('../pass.js')
 // sequelize
 const Sequelize = require("sequelize");
 
-const sequelize = new Sequelize("onlineshop", "root", '9kr1m@mysql', {
+const sequelize = new Sequelize("onlineshop", "root", pass, {
   dialect: "mysql",
   host: "localhost",
 });
